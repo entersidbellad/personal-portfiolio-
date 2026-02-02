@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-shirley-beige: #FFF9F0;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-text: #f5f5f5;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-mono;
+    background-color: var(--color-shirley-beige);
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body::selection {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .dark body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+  }
+
+  .dark body::selection {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
